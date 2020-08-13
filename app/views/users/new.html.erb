@@ -17,6 +17,9 @@
  <%= f.label(:height, "Height:")%>
  <%= f.text_field(:height)%>
 
+ <%= f.label(:admin, "Admin") %>
+ <%= f.check_box(:admin, id: "user_admin") %>
+
  <%= f.submit("Create User") %>
 <% end %>
 
