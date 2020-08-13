@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   #view
   get '/signin',  to: 'sessions#new', as: 'sign_in'
   post '/session', to: 'sessions#create'
-  delete '/session', to: 'sessions#delete'
+  delete '/session', to: 'sessions#destroy'
   
   post '/rides/', to: 'rides#create' , as: 'rides'
 

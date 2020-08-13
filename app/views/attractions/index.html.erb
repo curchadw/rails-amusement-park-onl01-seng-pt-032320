@@ -1,0 +1,16 @@
+<%= @attractions.each do |attraction|%>
+    <div>
+    <ul>
+        <li><%= attraction.name %></li>
+        <li><%= attraction.tickets %></li>
+        <li><%= attraction.nausea_rating %></li>
+        <li><%= attraction.happiness_rating %></li>
+        <li><%= attraction.min_height %></li>
+    </ul>
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+
+    </div>
+
+<% end %>
+
+
