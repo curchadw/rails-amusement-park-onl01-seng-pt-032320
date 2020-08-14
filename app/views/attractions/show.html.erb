@@ -5,5 +5,5 @@
 <%= @attraction.happiness_rating %>
 <%= @attraction.min_height %>
 
-<button>Go on this ride</button>
+<%= button_to "Go on this ride", current_user, method: 'post' %>
 

@@ -1,7 +1,7 @@
 <div class='center'>
     <div>
         
-    
+    <% if @user %>
         <% if @user.admin %>
             
 
@@ -13,7 +13,7 @@
         <p><strong>Mood:</strong><%= @user.mood %></p>
         <p><strong>Tickets:</strong><%= @user.tickets %></p>
         <p><strong>Height:</strong><%= @user.height %></p>
-
+    <% end %>
         <p><%= link_to 'See attractions', attractions_path %></p>
         <p><%= link_to 'Log Out', session_path, method: 'delete' %></p>
     

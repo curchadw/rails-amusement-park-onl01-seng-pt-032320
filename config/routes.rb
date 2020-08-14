@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   #view
   get 'users/:id', to: 'users#show', as: 'user'
+  post 'users/:id', to: 'users#show'
   delete '/users/:id', to: 'users#destroy'
 
   #view
