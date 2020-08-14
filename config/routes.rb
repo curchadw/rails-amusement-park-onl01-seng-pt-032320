@@ -31,6 +31,6 @@ Rails.application.routes.draw do
   post '/session', to: 'sessions#create'
   delete '/session', to: 'sessions#destroy'
   
-  post '/rides/', to: 'rides#create' , as: 'rides'
+  post '/rides', to: 'rides#create' , as: 'rides'
 
 end
