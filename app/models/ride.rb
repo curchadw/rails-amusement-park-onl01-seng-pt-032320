@@ -11,9 +11,10 @@ class Ride < ActiveRecord::Base
     def not_tall
         "You are not tall enough to ride the #{self.attraction.name}."
     end
-
+    
     def requirements
         is_tall, has_enough_tickets = false
+        
         if self.user.height >= self.attraction.min_height
             is_tall = true
         end
@@ -36,6 +37,7 @@ class Ride < ActiveRecord::Base
             :nausea => new_nau,
             :happiness => new_hap,
         )
+        "Thanks for riding the #{self.attraction.name}!"
     end
 
 
