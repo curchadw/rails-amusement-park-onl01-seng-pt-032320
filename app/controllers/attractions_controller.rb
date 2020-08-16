@@ -20,12 +20,12 @@ class AttractionsController < ApplicationController
 
     def edit
         @attraction = Attraction.find_by(id: params[:id])
-        @ride = @attraction.rides.build(user_id: current_user)
+        @ride = @attraction.rides.build(user_id: current_user.id)
     end
 
     def update
         attraction = Attraction.find_by(id: params[:id])
-        attraction = Attraction.update(attraction_params)
+        attraction.update(attraction_params)
         redirect_to attraction_path(attraction)
     end
 

@@ -1,3 +1,8 @@
+
+<% if current_user.admin %>
+<%= link_to "New Attraction", new_attraction_path %>
+<% end %>
+
 <%= @attractions.each do |attraction|%>
     <div>
     <ul>
@@ -7,10 +12,17 @@
         <li><%= attraction.happiness_rating %></li>
         <li><%= attraction.min_height %></li>
     </ul>
-    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+    <% if current_user.admin %>
+        <%= link_to "Show #{attraction.name}", attraction_path(attraction) %>
+    <% end %>
+    <% if !current_user.admin %>
+        <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+    <% end%>
 
     </div>
 
 <% end %>
+
+
 
 
